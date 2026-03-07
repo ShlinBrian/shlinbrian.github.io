@@ -4,11 +4,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Brian Lin | Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Brian Lin, a backend software engineer building scalable, transactional APIs with expertise in Python and AWS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <div class="cursor"></div>
+
+    <nav class="navbar">
+        <div class="logo">BL.</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="hover-target">About</a></li>
+            <li><a href="#experience" class="hover-target">Experience</a></li>
+            <li><a href="#education" class="hover-target">Education</a></li>
+            <li><a href="#certifications" class="hover-target">Certifications</a></li>
+            <li><a href="#projects" class="hover-target">Projects</a></li>
+            <li><a href="#gallery" class="hover-target">Gallery</a></li>
+            <li><a href="#contact" class="hover-target">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content fade-in-up">
+                <p class="overline">Hello, I'm</p>
+                <h1 class="display-name">Brian Lin</h1>
+                <h2 class="display-role">Software Engineer <span style="white-space: nowrap;">(Full Stack)</span></h2>
+                <p class="hero-description">
+                    Specializing in robust backend systems, cloud infrastructure, and applying AI/ML within production
+                    applications. Passionate about bridging scalable architecture with seamless frontend user
+                    experiences.
+                </p>
+                <div class="hero-actions">
+                    <a href="#experience" class="btn btn-primary hover-target">View My Experience</a>
+                    <a href="material/LIN_Shih-Hsun_CV.pdf" target="_blank"
+                        class="btn btn-secondary hover-target">Resume</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="glass-shape shape-1"></div>
+                <div class="glass-shape shape-2"></div>
+                <div class="hero-image-mask hover-target">
+                    <img src="material/web/me_1.png" alt="Brian Lin Portrait" class="hero-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">01.</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am a backend engineer with core expertise in <strong>Python</strong> and experience in Java
+                            and Go. I specialize in designing multi-tenant platforms, optimizing cloud infrastructure on
+                            AWS, and transitioning legacy systems to modern event-driven architectures.</p>
+                        <p>Currently, I build and operate a credit platform at <span class="highlight">CyberLink</span>,
+                            handling over 10M+ daily API calls and significant revenue streams. Previously, I integrated
+                            healthcare services for over 200K users at Nightingale AI.</p>
+                        <p>Outside of coding, I hold a Master's degree in Computer Science from National Cheng Kung
+                            University with a 4.0 GPA and a publication in PAKDD 2024.</p>
+
+                        <div class="tech-stack">
+                            <h3>Tech Stack</h3>
+                            <div class="tags">
+                                <span>Python</span><span>Java</span><span>Go</span><span>TypeScript</span>
+                                <span>FastAPI</span><span>Spring Boot</span><span>PostgreSQL</span>
+                                <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-mask hover-target">
+                        <img src="material/web/me_2.png" alt="Brian Lin Profile" class="about-image"
+                            onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80'">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">02.</span>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3 class="timeline-role">Sr. Software Engineer</h3>
+                                    <h4 class="timeline-company">CyberLink <span class="location">Taipei, Taiwan</span>
+                                    </h4>
+                                </div>
+                                <span class="timeline-date">Oct 2023 - Present</span>
+                            </div>
+                            <h5 class="timeline-category">Credit Platform Architecture & Optimization</h5>
+                            <ul class="timeline-points">
+                                <li>Designed a multi-tenant credit platform from 0 to 1 handling 10M+ daily API calls.
+                                </li>
+                                <li>Built robust transaction flows and payment gateway integrations, supporting over
+                                    $100K weekly.</li>
+                                <li>Decoupled high-volume APIs using AWS SQS, improving p95 latency by ~90%.</li>
+                                <li>Led MSSQL to PostgreSQL (AWS RDS) migration for strict data integrity.</li>
+                            </ul>
+                            <h5 class="timeline-category">Infrastructure & DevOps Excellence</h5>
+                            <ul class="timeline-points" style="margin-bottom: 0;">
+                                <li>Refactored legacy cron jobs into AWS Lambda, cutting infra costs by 30%.</li>
+                                <li>Engineered event-driven serverless workflows on AWS, reducing manual operational
+                                    by ~80%.</li>
+                                <li>Optimized CI/CD pipelines with 90% test coverage, upholding 99.9% service
+                                    availability targets.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3 class="timeline-role">Software Engineer</h3>
+                                    <h4 class="timeline-company">Nightingale AI <span class="location">Tainan,
+                                            Taiwan</span></h4>
+                                </div>
+                                <span class="timeline-date">Oct 2021 - Jul 2023</span>
+                            </div>
+                            <ul class="timeline-points">
+                                <li>Developed a healthcare service integrating identity APIs and LINE Webhooks, serving
+                                    over 200K users.</li>
+                                <li>Built internal admin dashboards to streamline clinic operations and workloads.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="experience section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">03.</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Edu 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3 class="timeline-role" style="margin-bottom: 12px;">M.S. in Computer Science</h3>
+                                    <h4 class="timeline-company">National Cheng Kung University <span
+                                            class="location">Tainan, Taiwan</span></h4>
+                                </div>
+                                <span class="timeline-date">2021 - 2023</span>
+                            </div>
+                            <div class="tags" style="margin-bottom: 15px;">
+                                <span style="border-color: rgba(255,255,255,0.15); color: var(--text-primary);">GPA:
+                                    4.0/4.3</span>
+                            </div>
+                            <ul class="timeline-points">
+                                <li><strong>PAKDD 2024 Accepted Paper:</strong> <a
+                                        href="https://link.springer.com/chapter/10.1007/978-981-97-2262-4_23"
+                                        target="_blank" rel="noopener noreferrer"
+                                        style="color: var(--accent); text-decoration: underline; text-decoration-color: var(--text-secondary); text-underline-offset: 3px; font-weight: 500;">2PM-MARL
+                                        for Online Placement of Mobile EV Charging Stations.</a></li>
+                                <li>Developed a hybrid multi-agent reinforcement learning algorithm for dynamic
+                                    EV-charger placement.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Edu 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-head">
+                                <div>
+                                    <h3 class="timeline-role" style="margin-bottom: 0;">B.S. in Applied Mathematics</h3>
+                                    <h4 class="timeline-company">Fu Jen Catholic University <span
+                                            class="location">Taipei, Taiwan</span></h4>
+                                </div>
+                                <span class="timeline-date">2016 - 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">04.</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="cert-grid">
+                    <!-- Cert 1: ML Engineer -->
+                    <a href="https://www.credly.com/badges/4c8beda6-4b8c-4f8e-9f46-05fee2b88ae7/public_url"
+                        target="_blank" class="cert-card hover-target">
+                        <img src="https://images.credly.com/images/1a634b4e-3d6b-4a74-b118-c0dcb429e8d2/image.png"
+                            alt="AWS Certified Machine Learning Engineer - Associate Badge" class="cert-badge">
+                        <div class="cert-info">
+                            <h3 class="cert-title">Machine Learning Engineer – Associate</h3>
+                            <span class="cert-issuer">Amazon Web Services (AWS)</span>
+                        </div>
+                    </a>
+
+                    <!-- Cert 2: AI Practitioner -->
+                    <a href="https://www.credly.com/badges/ba9a6908-0f2a-4636-bb29-dbfd3049ac81/linked_in_profile"
+                        target="_blank" class="cert-card hover-target">
+                        <img src="https://images.credly.com/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
+                            alt="AWS Certified AI Practitioner Badge" class="cert-badge">
+                        <div class="cert-info">
+                            <h3 class="cert-title">AI Practitioner</h3>
+                            <span class="cert-issuer">Amazon Web Services (AWS)</span>
+                        </div>
+                    </a>
+
+                    <!-- Cert 3: Cloud Practitioner -->
+                    <a href="https://www.credly.com/badges/6de37018-f649-4f72-9a83-d3bdcbe13e28/public_url"
+                        target="_blank" class="cert-card hover-target">
+                        <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+                            alt="AWS Certified Cloud Practitioner Badge" class="cert-badge">
+                        <div class="cert-info">
+                            <h3 class="cert-title">Cloud Practitioner</h3>
+                            <span class="cert-issuer">Amazon Web Services (AWS)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">05.</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card hover-target">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="project-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/shlinbrian" target="_blank" aria-label="GitHub"><svg
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Realtime Notes API Platform</h3>
+                            <p class="project-desc">A Kubernetes-native collaborative editing & AI search backend. Built
+                                using FastAPI and WebSockets for real-time multiplayer editing.</p>
+                            <div class="project-tags">
+                                <span>FastAPI</span><span>WebSockets</span><span>FAISS</span><span>Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card hover-target">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="project-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ShlinBrian/linebot-stock" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">LineBot Stock Forecaster</h3>
+                            <p class="project-desc">A functional LINE chatbot offering stock market forecasts and self-defined user notifications. Built with FastAPI and optimized with Redis caching.</p>
+                            <div class="project-tags">
+                                <span>Python</span><span>FastAPI</span><span>Redis</span><span>LINE API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-num">06.</span>
+                    <h2 class="section-title">Life & Albums</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item hover-target">
+                        <img src="" alt="Gallery Photo 1" id="gallery-img-1" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item hover-target">
+                        <img src="" alt="Gallery Photo 2" id="gallery-img-2" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item hover-target">
+                        <img src="" alt="Gallery Photo 3" id="gallery-img-3" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container reveal">
+                <div class="contact-content">
+                    <span class="overline">What's Next?</span>
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-desc">
+                        I'm always open to discussing new opportunities, architecture discussions, or just saying hi.
+                        Let's connect!
+                    </p>
+                    <a href="mailto:shlinbrian@gmail.com" class="btn btn-primary hover-target">Say Hello</a>
+
+                    <div class="social-links">
+                        <a href="https://github.com/shlinbrian" target="_blank" class="hover-target"
+                            aria-label="GitHub">GitHub</a>
+                        <span class="dot-separator">•</span>
+                        <a href="https://linkedin.com/in/shlinbrian" target="_blank" class="hover-target"
+                            aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built carefully by Brian Lin. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
